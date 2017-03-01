@@ -1,0 +1,27 @@
+<h1>Please add a new Book!</h1>
+
+<%= form_for :bookitem, url: bookitems_path do |f| %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </p>
+
+   <p>
+    <%= f.label :pages %><br>
+    <%= f.text_field :pages %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', bookitems_path %>
+

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  student_or_teacher: MyString
+  age: MyString
+  pages_read: MyString
+  books_read: MyString
+  reading_level: MyString
+  book_list: MyText
+
+two:
+  name: MyString
+  student_or_teacher: MyString
+  age: MyString
+  pages_read: MyString
+  books_read: MyString
+  reading_level: MyString
+  book_list: MyText
