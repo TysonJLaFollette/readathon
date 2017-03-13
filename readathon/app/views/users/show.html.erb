@@ -1,0 +1,37 @@
+<h1>Now here is somebody special! </h1>
+<p>
+	<strong>Name:</strong>
+	<%= @user.name %>
+</p>
+
+<p>
+	<strong>This is a:</strong>
+	<%= @user.student_or_teacher %>
+</p>
+
+<p>
+	<strong>This persons age is: </strong>
+	<%= @user.age %>
+</p>
+
+<p>
+	<strong>This person has read this many pages: </strong>
+	<%= @user.pages_read %>
+</p>
+
+<p>
+	<strong>This person has read this many books:</strong>
+	<%= @user.books_read %>
+</p>
+
+<p>
+	<strong>Their reading level is:</strong>
+	<%= @user.reading_level %>
+</p>
+
+<p>
+	<strong>Their book list: </strong>
+	<%= @user.book_list %>
+</p>
+
+<%= link_to 'Back', users_path %>
