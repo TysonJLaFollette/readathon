@@ -47,3 +47,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#windows 64 hates coffeescript, so force an old but compatible version.
+gem 'coffee-script-source', '1.8.0'
