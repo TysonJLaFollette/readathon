@@ -153,3 +153,211 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 181ms (Views: 151.9ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-17 10:49:03 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 184ms (Views: 155.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-17 10:49:04 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 265ms (Views: 147.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-03-17 10:49:06 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 238ms (Views: 204.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-17 10:50:18 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ArJpQtOle2nneFRgFt5NDgL8SDrduXqcj7AmHyApkw+ir0Q9iX+LzcicLTIG2p5v/PEHnex0wMrL3HhczhCVg==", "user"=>{"name"=>"Brigham Michaelis", "student_or_teacher"=>"27th Level warrior mage", "age"=>"nunya", "pages_read"=>"too many to count", "books_read"=>"tomes upon tomes", "reading_level"=>"Dark Lord of Barad Dur", "book_list"=>"lotr, aldskjf\r\nalskdjf\r\nalskdjf\r\nalskjdf"}, "commit"=>"Save User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "student_or_teacher", "age", "pages_read", "books_read", "reading_level", "book_list", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brigham Michaelis"], ["student_or_teacher", "27th Level warrior mage"], ["age", "nunya"], ["pages_read", "too many to count"], ["books_read", "tomes upon tomes"], ["reading_level", "Dark Lord of Barad Dur"], ["book_list", "lotr, aldskjf\r\nalskdjf\r\nalskdjf\r\nalskjdf"], ["created_at", 2017-03-17 16:50:18 UTC], ["updated_at", 2017-03-17 16:50:18 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 12ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/users/1" for ::1 at 2017-03-17 10:50:18 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 174ms (Views: 141.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-17 10:50:25 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 178ms (Views: 152.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-03-17 10:50:33 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 182ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-17 10:51:28 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P3uCB38uU4LTMLIDpgAyPYnPjeBo5NCt64mDofb+lU7t+/aygkU4QEOPI+buQCFwDje43vQj5kSymDLY+UZxVA==", "user"=>{"name"=>"Bridget Lundahl", "student_or_teacher"=>"yes", "age"=>"idk", "pages_read"=>"alot ", "books_read"=>"43", "reading_level"=>"2", "book_list"=>"al;sdkjf\r\nalksdjf\r\nalskdjf"}, "commit"=>"Save User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "student_or_teacher", "age", "pages_read", "books_read", "reading_level", "book_list", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bridget Lundahl"], ["student_or_teacher", "yes"], ["age", "idk"], ["pages_read", "alot "], ["books_read", "43"], ["reading_level", "2"], ["book_list", "al;sdkjf\r\nalksdjf\r\nalskdjf"], ["created_at", 2017-03-17 16:51:28 UTC], ["updated_at", 2017-03-17 16:51:28 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 11ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/users/2" for ::1 at 2017-03-17 10:51:28 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 170ms (Views: 142.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-17 10:51:32 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 183ms (Views: 158.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-17 10:51:34 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 169ms (Views: 144.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookitems" for ::1 at 2017-03-17 10:51:36 -0600
+Processing by BookitemsController#index as HTML
+  Rendering bookitems/index.html.erb within layouts/application
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT "bookitems".* FROM "bookitems"[0m
+  Rendered bookitems/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 180ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookitems/new" for ::1 at 2017-03-17 10:51:37 -0600
+Processing by BookitemsController#new as HTML
+  Rendering bookitems/new.html.erb within layouts/application
+  Rendered bookitems/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 183ms (Views: 148.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/bookitems" for ::1 at 2017-03-17 10:52:13 -0600
+Processing by BookitemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JFqJyvOQ1T53k2IRW14OXp6EyCj2VuB1LEqz15PzevtZAHlExaxg4AavVv8jcq3nrkUToBeZxYS3U8hfkga5cg==", "bookitem"=>{"title"=>"Women and their ways", "author"=>"O. knee Hunk", "pages"=>"87324"}, "commit"=>"Save Bookitem"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "bookitems" ("title", "author", "pages", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Women and their ways"], ["author", "O. knee Hunk"], ["pages", "87324"], ["created_at", 2017-03-17 16:52:13 UTC], ["updated_at", 2017-03-17 16:52:13 UTC]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/bookitems/1
+Completed 302 Found in 11ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/bookitems/1" for ::1 at 2017-03-17 10:52:13 -0600
+Processing by BookitemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookitems/show.html.erb within layouts/application
+  Rendered bookitems/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 173ms (Views: 145.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookitems" for ::1 at 2017-03-17 10:52:17 -0600
+Processing by BookitemsController#index as HTML
+  Rendering bookitems/index.html.erb within layouts/application
+  [1m[36mBookitem Load (1.0ms)[0m  [1m[34mSELECT "bookitems".* FROM "bookitems"[0m
+  Rendered bookitems/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 180ms (Views: 154.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bookitems/new" for ::1 at 2017-03-17 10:52:20 -0600
+Processing by BookitemsController#new as HTML
+  Rendering bookitems/new.html.erb within layouts/application
+  Rendered bookitems/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 177ms (Views: 152.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookitems" for ::1 at 2017-03-17 10:52:44 -0600
+Processing by BookitemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSwBzrtJLb3cJHcnNUaLkOsKiC1dqswCahdKOvuWIzZMdvFAjXWYY60YQ8lNaigp28tTpbxl6fPxDjGy+mPgvw==", "bookitem"=>{"title"=>"How to make money off your friends in SE", "author"=>"Ritch Guy", "pages"=>"23"}, "commit"=>"Save Bookitem"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "bookitems" ("title", "author", "pages", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "How to make money off your friends in SE"], ["author", "Ritch Guy"], ["pages", "23"], ["created_at", 2017-03-17 16:52:44 UTC], ["updated_at", 2017-03-17 16:52:44 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/bookitems/2
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/bookitems/2" for ::1 at 2017-03-17 10:52:45 -0600
+Processing by BookitemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering bookitems/show.html.erb within layouts/application
+  Rendered bookitems/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 168ms (Views: 139.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookitems" for ::1 at 2017-03-17 10:52:47 -0600
+Processing by BookitemsController#index as HTML
+  Rendering bookitems/index.html.erb within layouts/application
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT "bookitems".* FROM "bookitems"[0m
+  Rendered bookitems/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 185ms (Views: 158.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-17 10:52:49 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 170ms (Views: 144.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookitems" for ::1 at 2017-03-17 10:52:50 -0600
+Processing by BookitemsController#index as HTML
+  Rendering bookitems/index.html.erb within layouts/application
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT "bookitems".* FROM "bookitems"[0m
+  Rendered bookitems/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 178ms (Views: 152.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-17 10:52:52 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 215ms (Views: 189.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-17 10:52:52 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 167ms (Views: 142.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-17 10:52:58 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 182ms (Views: 155.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
