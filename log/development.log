@@ -648,3 +648,149 @@ Processing by LeaderboardController#index as HTML
 Completed 200 OK in 435ms (Views: 341.0ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:05:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 1381ms (Views: 1242.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:06:49 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 382ms (Views: 320.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:16:00 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 441ms (Views: 380.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:17:13 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 402ms (Views: 338.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:21:09 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 407ms (Views: 348.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:30:37 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 438ms (Views: 369.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:31:11 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 402ms (Views: 344.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:32:24 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 406ms (Views: 347.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:35:50 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 416ms (Views: 347.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:36:06 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 355ms (Views: 298.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:36:07 -0600
+Processing by WelcomeController#index as HTML
+Started GET "/" for ::1 at 2017-03-22 17:36:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1052ms (Views: 915.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 724ms (Views: 663.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:36:12 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 360ms (Views: 309.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:41:40 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 404ms (Views: 346.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:41:44 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 389ms (Views: 333.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-22 17:41:50 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 436ms (Views: 356.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:54:18 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 385ms (Views: 329.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:54:20 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 468ms (Views: 397.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:54:24 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 357ms (Views: 305.2ms | ActiveRecord: 0.0ms)
+
+
