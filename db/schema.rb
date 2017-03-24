@@ -10,26 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307053603) do
+ActiveRecord::Schema.define(version: 20170323022028) do
 
-  create_table "bookitems", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
-    t.string   "pages"
+    t.integer  "pages"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "student_or_teacher"
-    t.string   "age"
-    t.string   "pages_read"
-    t.string   "books_read"
+    t.boolean  "is_teacher"
+    t.integer  "age"
+    t.integer  "pages_read"
+    t.integer  "books_read"
     t.string   "reading_level"
-    t.text     "book_list"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
