@@ -8,8 +8,13 @@
   </p>
 
   <p>
+
     <%= f.label :student_or_teacher %><br>
-    <%= f.text_field :student_or_teacher %>
+    <%= radio_button_tag(:student_or_teacher, "Student")%>
+    <%= label_tag(:student, "Student") %>
+    <%= radio_button_tag(:student_or_teacher, "Teacher")%>
+    <%= label_tag(:teacher, "Teacher") %>
+
   </p>
 
   <p>
@@ -31,12 +36,12 @@
     <%= f.label :reading_level %><br>
     <%= f.text_field :reading_level %>
   </p>
- 
+
   <p>
     <%= f.label :book_list %><br>
     <%= f.text_area :book_list %>
   </p>
- 
+
   <p>
     <%= f.submit %>
   </p>

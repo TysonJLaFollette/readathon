@@ -1,7 +1,11 @@
 <h1>Editing a Book</h1>
 
 <%= form_for :bookitem, url: bookitem_path(@bookitem), method: :patch do |f| %>
-  
+<% if @bookitem.errors.any? %>
+  <% @bookitem.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
