@@ -2,18 +2,22 @@
 
 <%= form_for :user, url: users_path do |f| %>
 
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |message| %>
+    <%= message %> <br>
+  <% end %>
+<% end %>
+
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
 
   <p>
-
-    <%= f.label :student_or_teacher %><br>
-    <%= radio_button_tag(:student_or_teacher, "Student")%>
-    <%= label_tag(:student, "Student") %>
-    <%= radio_button_tag(:student_or_teacher, "Teacher")%>
-    <%= label_tag(:teacher, "Teacher") %>
+    <%= f.radio_button :student_or_teacher, "Student", :checked => true %>
+    <%= label :student_or_teacher, "Student" %>
+    <%= f.radio_button :student_or_teacher, "Teacher"%>
+    <%= label :student_or_teacher, "Teacher" %>
 
   </p>
 
