@@ -1,0 +1,21 @@
+<h1>Listing all the things</h1>
+
+<%= link_to 'HOME', controller: 'welcome' %>
+<%= link_to 'new thing', new_users2book_path %>
+
+<table>
+  <tr>
+    <th>UserID</th>
+    <th>BookID</th>
+  </tr>
+ 
+  <% @users2books.each do |users2book| %>
+    <tr>
+      <td><%= users2book.userid %></td>
+      <td><%= users2book.bookid %></td>
+      <td><%= link_to 'Show', users2book_path(users2book) %></td>
+      <td><%= link_to 'Edit', edit_users2book_path(users2book) %></td>
+      <td><%= link_to 'Destroy', users2book_path(users2book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

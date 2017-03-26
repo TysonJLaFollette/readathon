@@ -35,3 +35,15 @@
 </p>
 
 <%= link_to 'Back', users_path %>
+
+
+
+<h2>Behold the book list of: <%= @user.name %> </h2>	
+
+<h2>Book List:</h2>
+
+<% @booklist = Users2book.all.each do |user2book| %>
+	<% if user2book.userid === @user.id %>
+		<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
+	<% end %>
+<% end %>
