@@ -15,10 +15,11 @@
       <td><%= bookitem.title %></td>
       <td><%= bookitem.author %></td>
       <td><%= bookitem.pages %></td>
-
+      <td><%= bookitem.id %></td>
       <td><%= link_to 'Show', bookitem_path(bookitem) %></td>
       <td><%= link_to 'Edit', edit_bookitem_path(bookitem) %></td>
       <td><%= link_to 'Destroy', bookitem_path(bookitem), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
+

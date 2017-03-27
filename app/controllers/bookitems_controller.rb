@@ -1,8 +1,4 @@
 class BookitemsController < ApplicationController
-
-
-
-
 	def index
 		@bookitems = Bookitem.all
 	end
