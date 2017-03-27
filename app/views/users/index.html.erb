@@ -15,12 +15,12 @@
   <% @users.each do |user| %>
     <tr>
       <td><%= user.name %></td>
-      <td><%= user.student_or_teacher %></td>
+      <td><%= user.is_teacher %></td>
       <td><%= user.age %></td>
       <td><%= user.pages_read %></td>
       <td><%= user.books_read %></td>
       <td><%= user.reading_level %></td>
-      <td><%= user.book_list %></td>
+      <td>Filler for booklist query...</td>
       <td><%= link_to 'Show', user_path(user) %></td>
       <td><%= link_to 'Edit', edit_user_path(user) %></td>
       <td><%= link_to 'Destroy', user_path(user),method: :delete,data: { confirm: 'Are you Sure?' } %> </td>

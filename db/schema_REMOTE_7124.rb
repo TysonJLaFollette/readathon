@@ -31,11 +31,4 @@ ActiveRecord::Schema.define(version: 20170327173232) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "users2books", force: :cascade do |t|
-    t.integer  "userid"
-    t.integer  "bookid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
