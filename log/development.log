@@ -3837,3 +3837,171 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 146ms (Views: 121.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-27 10:36:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (11.0ms)
+Started GET "/" for ::1 at 2017-03-27 10:36:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 726ms (Views: 696.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 15419ms (Views: 15368.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-27 10:36:47 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 209ms (Views: 176.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for ::1 at 2017-03-27 10:36:49 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 244ms (Views: 199.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-27 10:42:11 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 193ms (Views: 167.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for ::1 at 2017-03-27 10:42:21 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUsers2book Load (1.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 193ms (Views: 162.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-27 10:42:33 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 197ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 10:42:36 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 183ms (Views: 157.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users2books" for ::1 at 2017-03-27 10:42:42 -0600
+Processing by Users2booksController#index as HTML
+  Rendering users2books/index.html.erb within layouts/application
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  Rendered users2books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 182ms (Views: 157.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 10:42:53 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 197ms (Views: 170.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-27 10:42:53 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 190ms (Views: 162.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5" for ::1 at 2017-03-27 10:43:01 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 187ms (Views: 161.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 10:43:09 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 189ms (Views: 162.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users2books" for ::1 at 2017-03-27 10:43:11 -0600
+Processing by Users2booksController#index as HTML
+  Rendering users2books/index.html.erb within layouts/application
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  Rendered users2books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 183ms (Views: 157.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users2books/10" for ::1 at 2017-03-27 10:43:36 -0600
+Processing by Users2booksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HRpsOKPdMfvdS+dfHzvzOTpRQ2Nq5R3wms31xenrBmGcPIvW6TsCPThQiT4qCjwTgcbZV+NzvlfMWdNXr9TP3A==", "id"=>"10"}
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT  "users2books".* FROM "users2books" WHERE "users2books"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users2books" WHERE "users2books"."id" = ?[0m  [["id", 10]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users2books
+Completed 302 Found in 11ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users2books" for ::1 at 2017-03-27 10:43:36 -0600
+Processing by Users2booksController#index as HTML
+  Rendering users2books/index.html.erb within layouts/application
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  Rendered users2books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 184ms (Views: 157.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 10:43:39 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 186ms (Views: 158.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-27 10:43:40 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 194ms (Views: 166.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for ::1 at 2017-03-27 10:43:43 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUsers2book Load (0.0ms)[0m  [1m[34mSELECT "users2books".* FROM "users2books"[0m
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT  "bookitems".* FROM "bookitems" WHERE "bookitems"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 192ms (Views: 165.6ms | ActiveRecord: 0.0ms)
+
+
