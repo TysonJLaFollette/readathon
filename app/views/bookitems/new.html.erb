@@ -2,11 +2,18 @@
 
 <%= form_for :bookitem, url: bookitems_path do |f| %>
 
+  <% if @bookitem.errors.any? %>
+    <% @bookitem.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
+
   </p>
- 
+
+
   <p>
     <%= f.label :author %><br>
     <%= f.text_field :author %>
@@ -16,7 +23,7 @@
     <%= f.label :pages %><br>
     <%= f.text_field :pages %>
   </p>
- 
+
   <p>
     <%= f.submit %>
   </p>
@@ -24,4 +31,3 @@
 
 
 <%= link_to 'Back', bookitems_path %>
-

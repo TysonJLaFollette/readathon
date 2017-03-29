@@ -2,14 +2,23 @@
 
 <%= form_for :user, url: users_path do |f| %>
 
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |message| %>
+    <%= message %> <br>
+  <% end %>
+<% end %>
+
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :is_teacher %><br>
-    <%= f.text_field :is_teacher %>
+    <%= f.radio_button :student_or_teacher, "Student", :checked => true %>
+    <%= label :student_or_teacher, "Student" %>
+    <%= f.radio_button :student_or_teacher, "Teacher"%>
+    <%= label :student_or_teacher, "Teacher" %>
+
   </p>
 
   <p>
@@ -31,12 +40,12 @@
     <%= f.label :reading_level %><br>
     <%= f.text_field :reading_level %>
   </p>
- 
+
   <p>
     <%= f.label :book_list %><br>
     Add field here to add book IDs to this user...
   </p>
- 
+
   <p>
     <%= f.submit %>
   </p>
