@@ -14,8 +14,11 @@
   </p>
 
   <p>
-    <%= f.label :student_teacher %><br>
-    <%= f.text_field :student_or_teacher %>
+    <%= f.radio_button :student_or_teacher, "Student", :checked => true %>
+    <%= label :student_or_teacher, "Student" %>
+    <%= f.radio_button :student_or_teacher, "Teacher"%>
+    <%= label :student_or_teacher, "Teacher" %>
+
   </p>
 
   <p>
