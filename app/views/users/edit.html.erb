@@ -1,6 +1,12 @@
 <h1>Editing a user from the user base!</h1>
- 
+
 <%= form_for :user, url: user_path(@user), method: :patch do |f| %>
+
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |message| %>
+    <%= message %> <br>
+  <% end %>
+<% end %>
 
   <p>
     <%= f.label :name %><br>
@@ -8,8 +14,12 @@
   </p>
 
   <p>
-    <%= f.label :is_teacher %><br>
-    <%= f.text_field :is_teacher %>
+
+    <%= f.radio_button :student_or_teacher, "Student", :checked => true %>
+    <%= label :student_or_teacher, "Student" %>
+    <%= f.radio_button :student_or_teacher, "Teacher"%>
+    <%= label :student_or_teacher, "Teacher" %>
+
   </p>
 
   <p>
@@ -31,15 +41,15 @@
     <%= f.label :reading_level %><br>
     <%= f.text_field :reading_level %>
   </p>
- 
+
   <p>
     Booklist was here...
   </p>
- 
+
   <p>
     <%= f.submit %>
   </p>
 
- 
+
 <% end %>
  <%= link_to 'Back', users_path %>
