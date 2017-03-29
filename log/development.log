@@ -362,6 +362,7 @@ Completed 200 OK in 182ms (Views: 155.4ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2017-03-23 21:43:12 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by WelcomeController#index as HTML
@@ -5382,5 +5383,438 @@ Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 380ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for ::1 at 2017-03-20 10:46:38 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 3244ms (Views: 3034.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard" for ::1 at 2017-03-20 10:47:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/leaderboard"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (24.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (96.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3992.0ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-20 10:48:31 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 420ms (Views: 368.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-20 11:11:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1056ms (Views: 971.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-20 11:12:06 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 372ms (Views: 317.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-20 11:12:11 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 480ms (Views: 386.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookitems" for ::1 at 2017-03-20 11:12:14 -0600
+Processing by BookitemsController#index as HTML
+  Rendering bookitems/index.html.erb within layouts/application
+  [1m[36mBookitem Load (0.0ms)[0m  [1m[34mSELECT "bookitems".* FROM "bookitems"[0m
+  Rendered bookitems/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 476ms (Views: 387.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-20 11:23:20 -0600
+Processing by LeaderboardController#index as HTML
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<LeaderboardController:0x9a8d008>):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2696.0ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-20 11:24:14 -0600
+Processing by LeaderboardController#index as HTML
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `users' for #<LeaderboardController:0x904ca88>
+Did you mean?  users_url):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2692.0ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-20 11:26:54 -0600
+Processing by LeaderboardController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeaderboardController::Users):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2592.0ms)
+Started GET "/" for ::1 at 2017-03-21 14:28:00 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 2671ms (Views: 2562.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:28:40 -0600
+Processing by LeaderboardController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeaderboardController::Users):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (3887.8ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:31:49 -0600
+Processing by LeaderboardController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeaderboardController::Users):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (3034.4ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:34:18 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 70ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=all):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (3181.5ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:38:01 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pagecount" DESC LIMIT ?[0m  [["LIMIT", 5]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.pagecount: SELECT  "users".* FROM "users" ORDER BY "users"."pagecount" DESC LIMIT ?):
+  
+app/controllers/leaderboard_controller.rb:3:in `index'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (3101.4ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:38:54 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 433ms (Views: 363.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:43:09 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (79.5ms)
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <p>Find me in app/views/leaderboard/index.html.erb</p>
+    3: <p>Todo: html table containing five rows. Add generation functions to controller.</p>
+    4: <table>
+    5: <% for @person in @leaders %>
+    6: 	<%= @person %>
+    7: <% end %>
+    8: </table>
+  
+app/views/leaderboard/index.html.erb:5:in `_app_views_leaderboard_index_html_erb___102075515_85045476'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2664.3ms)
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:44:07 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered leaderboard/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 442ms (Views: 377.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:45:09 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered leaderboard/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 439ms (Views: 368.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 14:47:30 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered leaderboard/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 513ms (Views: 430.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 15:45:58 -0600
+Processing by LeaderboardController#index as HTML
+  Rendering leaderboard/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered leaderboard/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 464ms (Views: 400.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-21 15:48:43 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 435ms (Views: 341.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:05:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 1381ms (Views: 1242.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:06:49 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 382ms (Views: 320.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:16:00 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 441ms (Views: 380.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:17:13 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 402ms (Views: 338.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:21:09 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 407ms (Views: 348.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:30:37 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 438ms (Views: 369.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:31:11 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 402ms (Views: 344.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:32:24 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 406ms (Views: 347.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:35:50 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 416ms (Views: 347.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:36:06 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 355ms (Views: 298.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:36:07 -0600
+Processing by WelcomeController#index as HTML
+Started GET "/" for ::1 at 2017-03-22 17:36:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1052ms (Views: 915.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 724ms (Views: 663.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:36:12 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 360ms (Views: 309.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:41:40 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 404ms (Views: 346.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:41:44 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 389ms (Views: 333.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-22 17:41:50 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 436ms (Views: 356.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:54:18 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 385ms (Views: 329.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leaderboard/index" for ::1 at 2017-03-22 17:54:20 -0600
+Processing by LeaderboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."pages_read" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendering leaderboard/index.html.erb within layouts/application
+  Rendered leaderboard/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 468ms (Views: 397.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-22 17:54:24 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 357ms (Views: 305.2ms | ActiveRecord: 0.0ms)
+>>>>>>> createleaderboard
 
 

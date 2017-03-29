@@ -1,0 +1,23 @@
+<%= link_to 'Back to Home', controller: 'welcome' %>
+<table>
+	<tr>
+		<th>Leaderboard</th>
+	</tr>
+	<tr>
+		<th>PLACE</th>
+		<th>NAME</th>
+		<th>PAGES READ</th>
+<% @place = 1 %>
+<% for @person in @leaders %>
+	<tr>
+		<td>
+		<%= @place %>
+		<% @place += 1 %>
+		</td>
+		<td>
+		<%= @person.name %>
+		</td>
+		<td><%= @person.pages_read %></td>
+	</tr>
+<% end %>
+</table>
