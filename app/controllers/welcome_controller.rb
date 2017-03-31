@@ -9,4 +9,16 @@ class WelcomeController < ApplicationController
 	@users2books = Users2book.all
   end
 
+  def contact
+
+  end
+
+  def careers
+
+  end
+
+  def about
+  	
+  end
+
 end
