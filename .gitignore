@@ -19,3 +19,6 @@
 
 # Ignore Byebug command history file.
 ##.byebug_history
+
+#Ignore computer specific .pid files. They interfere with running the server on different computers.
+/tmp/pids/*.*
