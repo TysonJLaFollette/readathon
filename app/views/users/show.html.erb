@@ -5,38 +5,46 @@
 </p>
 
 <p>
-	<strong>Is teacher:</strong>
-	<%= @user.is_teacher %>
+	<strong>Rank: </strong>
+	    <% if @user.is_teacher %>
+        <%= "Teacher" %>
+        <% else %>
+        <%= "Student" %>
+        <% end %>
 </p>
 
 <p>
-	<strong>This persons age is: </strong>
+	<strong>Age: </strong>
 	<%= @user.age %>
 </p>
 
 <p>
-	<strong>This person has read this many pages: </strong>
+	<strong>Total Pages Read: </strong>
 	<%= @user.pages_read %>
 </p>
 
 <p>
-	<strong>This person has read this many books:</strong>
+	<strong>Total Books Read: </strong>
 	<%= @user.books_read %>
 </p>
 
 <p>
-	<strong>Their reading level is:</strong>
+	<strong>Their reading level is: </strong>
 	<%= @user.reading_level %>
 </p>
 
 <p>
 	<strong>Their book list: </strong>
-	Booklist would go here...
+	<% @booklist = Users2book.all.each do |user2book| %>
+		<% if user2book.userid === @user.id %>
+			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
+		<% end %>
+	<% end %>
 </p>
 
 <%= link_to 'Back', users_path %>
 
-
+Delete below this###################################
 
 <h2>Behold the book list of: <%= @user.name %> </h2>	
 

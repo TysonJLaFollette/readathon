@@ -3,24 +3,28 @@
  <%= link_to 'New User', new_user_path %>
 <table>
   <tr>
-    <th>name</th>
-    <th>rank</th>
-    <th>age</th>
-    <th>pages read</th>
-    <th>books read</th>
-    <th>reading level</th>
-    <th>book list</th>
+    <th>Name: </th>
+    <th>Rank: </th>
+    <th>Age: </th>
+    <th>Pages Read: </th>
+    <th>Books Read: </th>
+    <th>Reading Level:</th>
   </tr>
  
   <% @users.each do |user| %>
     <tr>
       <td><%= user.name %></td>
-      <td><%= user.is_teacher %></td>
+      <td>
+        <% if user.is_teacher %>
+        <%= "Teacher" %>
+        <% else %>
+        <%= "Student" %>
+        <% end %>
+      </td>
       <td><%= user.age %></td>
       <td><%= user.pages_read %></td>
       <td><%= user.books_read %></td>
       <td><%= user.reading_level %></td>
-      <td>Filler for booklist query...</td>
       <td><%= link_to 'Show', user_path(user) %></td>
       <td><%= link_to 'Edit', edit_user_path(user) %></td>
       <td><%= link_to 'Destroy', user_path(user),method: :delete,data: { confirm: 'Are you Sure?' } %> </td>
