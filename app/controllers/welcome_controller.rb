@@ -5,8 +5,8 @@ class WelcomeController < ApplicationController
 
   def masterview
     @users = User.all
-	@bookitems = Bookitem.all
-	@users2books = Users2book.all
+  	@bookitems = Bookitem.all
+  	@users2books = Users2book.all
   end
 
   def contact
@@ -20,5 +20,17 @@ class WelcomeController < ApplicationController
   def about
   	
   end
+
+  def displayview
+    Rails.logger.debug("no way")
+    @users = User.all
+    @bookitems = Bookitem.all
+    @users2books = Users2book.all
+
+
+  end
+
+
+
 
 end

@@ -1,0 +1,92 @@
+hello to the display
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>The complete listing of the people base!</h1>
+<%= link_to 'HOME', controller: 'welcome' %>
+ <%= link_to 'New User', new_user_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.id %></td>
+      <td><%= link_to 'Show', user_path(user) %></td>
+      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <td><%= link_to 'Destroy', user_path(user),method: :delete,data: { confirm: 'Are you Sure?' } %> </td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+<h1>Listing all the books of superior Knowledge</h1>
+
+<%= link_to 'HOME', controller: 'welcome' %>
+<%= link_to 'new Book', new_bookitem_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>ID</th>
+  </tr>
+ 
+  <% @bookitems.each do |bookitem| %>
+    <tr>
+      <td><%= bookitem.title %></td>
+      <td><%= bookitem.id %></td>
+      <td><%= link_to 'Show', bookitem_path(bookitem) %></td>
+      <td><%= link_to 'Edit', edit_bookitem_path(bookitem) %></td>
+      <td><%= link_to 'Destroy', bookitem_path(bookitem), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+<h1>Listing all the things</h1>
+
+<%= link_to 'HOME', controller: 'welcome' %>
+<%= link_to 'new thing', new_users2book_path %>
+
+<table>
+  <tr>
+    <th>UserID</th>
+    <th>BookID</th>
+  </tr>
+ 
+  <% @users2books.each do |users2book| %>
+    <tr>
+      <td><%= users2book.userid %></td>
+      <td><%= users2book.bookid %></td>
+      <td><%= link_to 'Show', users2book_path(users2book) %></td>
+      <td><%= link_to 'Edit', edit_users2book_path(users2book) %></td>
+      <td><%= link_to 'Destroy', users2book_path(users2book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+
+
+<%= select("person", "role_id", @users.collect {|r| [ r.name, r.id ] }, { :include_blank => true } ) %>
+
+<%= select("person", "role_id", User.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'})  %>
+
+<%= collection_select(:lang_id, 0, User.all, :id, :name) %>
+
