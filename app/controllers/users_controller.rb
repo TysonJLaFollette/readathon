@@ -53,7 +53,7 @@ class UsersController < ApplicationController
 
 private 
 	def user_params
-		params.require(:user).permit(:name, :student_or_teacher, :age, :pages_read, :books_read, :reading_level, :book_list)
+		params.require(:user).permit(:name, :is_teacher, :age, :pages_read, :books_read, :reading_level, :book_list)
 		
 	end
 
