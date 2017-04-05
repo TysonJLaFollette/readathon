@@ -1,0 +1,21 @@
+<h1>Listing all the duals</h1>
+
+<%= link_to 'HOME', controller: 'welcome' %>
+<%= link_to 'new thing', new_dualbooklist_path %>
+
+<table>
+  <tr>
+    <th>Student 1</th>
+    <th>Student 2</th>
+  </tr>
+ 
+  <% @dualbooklists.each do |dualbooklist| %>
+    <tr>
+      <td><%= dualbooklist.studentone %></td>
+      <td><%= dualbooklist.studenttwo %></td>
+      <td><%= link_to 'Show', dualbooklist_path(dualbooklist) %></td>
+      <td><%= link_to 'Edit', edit_dualbooklist_path(dualbooklist) %></td>
+      <td><%= link_to 'Destroy', dualbooklist_path(dualbooklist), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

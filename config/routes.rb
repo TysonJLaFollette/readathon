@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :bookitems
   resources :users
   resources :users2books
+  resources :dualbooklists
   
 
   root 'welcome#index'
@@ -13,5 +14,6 @@ Rails.application.routes.draw do
   get "app/views/welcome/careers", to: "welcome#careers", as: "careers"
   get "app/views/welcome/about", to: "welcome#about", as: "about"
   get "app/views/welcome/displayview", to: "welcome#displayview", as: "displayview"
+  get "app/views/welcome/infoview", to: "welcome#infoview", as: "infoview"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

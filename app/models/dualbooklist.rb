@@ -1,0 +1,2 @@
+class Dualbooklist < ApplicationRecord
+end
