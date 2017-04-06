@@ -10,6 +10,10 @@ class UsersController < ApplicationController
 		@bookitems = Bookitem.all
 
 		@user = User.find(params[:id])
+
+		
+
+		@newUserBook = Users2book.new
 	end
 
 
