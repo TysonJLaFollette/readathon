@@ -1,0 +1,50 @@
+
+<h1>Summary of your class:</h1>
+<p>Number of students in class: <%= @numstudents %></p>
+<p>Total pages read by class: <%= @classpagetotal %></p>
+<p>Total nonunique books read: <%= @nonuniquebooksread %></p>
+<p>Highest pages read: <%= @highestpagesread %></p>
+<p>Fewest pages read: <%= @fewestpagesread %></p>
+<p>Average age in class: <%= @averageage %></p>
+<table>
+	<tr>
+		<th>Top Three Students</th>
+	</tr>
+	<tr>
+		<th>Name</th>
+		<th>Pages Read</th>
+	</tr>
+<% for @student in @topthreestudents %>
+	<tr>
+		<td><%= @student.name %></td>
+		<td><%= @student.pages_read %></td>
+	</tr>
+<% end %>
+</table>
+<br>
+<table>
+	<tr>
+		<th>Bottom Three Students</th>
+	</tr>
+	<tr>
+		<th>Name</th>
+		<th>Pages Read</th>
+	</tr>
+<% for @student in @bottomthreestudents %>
+	<tr>
+		<td><%= @student.name %></td>
+		<td><%= @student.pages_read %></td>
+	</tr>
+<% end %>
+</table>
+<br>
+<table>
+	<tr>
+		<th>All Students in Class</th>
+	</tr>
+<% for @student in @studentslist %>
+	<tr>
+		<td><%= @student.name %></td>
+	</tr>
+<% end %>
+</table>
