@@ -1,21 +1,15 @@
-<h1>Now here is somebody special! </h1>
+<h1>Detailed User Report </h1>
 <p>
 	<strong>Name:</strong>
 	<%= @user.name %>
 </p>
 
 <p>
-	<strong>Rank: </strong>
 	    <% if @user.is_teacher %>
         <%= "Teacher" %>
         <% else %>
         <%= "Student" %>
         <% end %>
-</p>
-
-<p>
-	<strong>Age: </strong>
-	<%= @user.age %>
 </p>
 
 <p>
@@ -29,12 +23,12 @@
 </p>
 
 <p>
-	<strong>Their reading level is: </strong>
+	<strong>Reading Level: </strong>
 	<%= @user.reading_level %>
 </p>
 
 <p>
-	<strong>Their book list: </strong>
+	<strong>Book list: </strong>
 	<% @booklist = Users2book.all.each do |user2book| %>
 		<% if user2book.userid === @user.id %>
 			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
@@ -43,15 +37,3 @@
 </p>
 
 <%= link_to 'Back', users_path %>
-
-Delete below this###################################
-
-<h2>Behold the book list of: <%= @user.name %> </h2>	
-
-<h2>Book List:</h2>
-
-<% @booklist = Users2book.all.each do |user2book| %>
-	<% if user2book.userid === @user.id %>
-		<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
-	<% end %>
-<% end %>
