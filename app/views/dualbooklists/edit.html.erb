@@ -1,36 +1,17 @@
-<h1>Editing an entry</h1>
+<h1>BOOKLIST vs. BOOKLIST CHALLENGE!</h1>
  
 <%= form_for :dualbooklist, url: dualbooklist_path(@dualbooklist), method: :patch do |f| %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>ID</th>
-  </tr>
- 
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= user.name %></td>
-      <td><%= user.id %></td>
-    </tr>
-  <% end %>
-</table>
- 
-
-  <h2>Please enter the user ID for student one:</h2>
+  <h2>Please Select student one!:</h2>
   <p>
-    <%= f.label :studentone %><br>
-    <%= f.text_field :studentone %>
+    <%= f.collection_select :studentone, @users, :id ,:name, include_blank: false  %>
+    <%#>
+    http://stackoverflow.com/questions/14113057/how-to-have-a-drop-down-select-field-in-a-rails-form %>
   </p>
- 
-  <h2>Please enter the user ID for student two:</h2>
+  <h2>Please Select student two!:</h2>
   <p>
-    <%= f.label :studenttwo %><br>
-    <%= f.text_field :studenttwo %>
+    <%= f.collection_select :studenttwo, @users, :id ,:name, include_blank: false  %>
   </p>
-
- 
- 
   <p>
     <%= f.submit %>
   </p>
