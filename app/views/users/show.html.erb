@@ -54,7 +54,7 @@
   <h2>Please enter the user ID here:</h2>
   <p>
     <%= f.label :userid %><br>
-    <%= f.text_field :userid %>
+    <%= f.hidden_field :userid, :value=> @user.id %>
   </p>
  
   <h2>Please enter the book ID here:</h2>
