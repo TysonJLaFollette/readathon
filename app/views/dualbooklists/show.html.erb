@@ -1,5 +1,4 @@
-
-
+<h1><strong>WHO HAS THE BETTER BOOKLIST?!!!</strong></h1>
 
 <style type="text/css">
 #wrap {
@@ -19,12 +18,16 @@
 <div id="wrap">
     <div id="left_col">
         <p>
-  <strong>s1:</strong>
-  <%= @dualbooklist.studentone %>
-</p>
+          <strong>IN THIS CORNER WE HAVE!!!</strong>
+          <% @chal1 = User.all.each do |c1| %>
+            <% if c1.id === @dualbooklist.studentone %>
+              <p> <%= User.find_by_id(c1.id).name %> </p>
+            <% end %>
+          <% end %>
+        </p>
  
  <p>
-	<strong>Student1 book list: </strong>
+	<strong> And the Book List: </strong>
 	<% @booklist = Users2book.all.each do |user2book| %>
 		<% if user2book.userid === @dualbooklist.studentone %>
 			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
@@ -32,20 +35,24 @@
 	<% end %>
 </p>
     </div>
-    <div id="right_col">
-        <p>
-  <strong>s2:</strong>
-  <%= @dualbooklist.studenttwo %>
-</p>
-<p>
-	<strong>Student2 book list: </strong>
-	<% @booklist = Users2book.all.each do |user2book| %>
-		<% if user2book.userid === @dualbooklist.studenttwo %>
-			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
-		<% end %>
-	<% end %>
-</p>
-    </div>
+      <div id="right_col">
+          <p>
+            <strong>AND IN THIS CORNER IS!!!</strong>
+            <% @chal2 = User.all.each do |c2| %>
+              <% if c2.id === @dualbooklist.studenttwo %>
+                <p> <%= User.find_by_id(c2.id).name %> </p>
+              <% end %>
+            <% end %>
+          </p>
+          <p>
+            <strong> And the Book List: </strong>
+          	<% @booklist = Users2book.all.each do |user2book| %>
+          		<% if user2book.userid === @dualbooklist.studenttwo %>
+          			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
+          		<% end %>
+          	<% end %>
+          </p>
+      </div>
 </div>
 
 
