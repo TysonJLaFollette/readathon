@@ -43,7 +43,10 @@ class Users2booksController < ApplicationController
 		@users2book = Users2book.new(users2book_params)
 
 		if @users2book.save
-			redirect_to @users2book
+			if false
+				redirect_to @users2book
+			end
+			redirect_to :back
 		else
 			render 'new'
 		end

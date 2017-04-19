@@ -18,16 +18,16 @@
 </table>
 
 
-  <h2>Please enter the user ID here:</h2>
+  <h2>Please select a user :</h2>
   <p>
-    <%= f.label :userid %><br>
-    <%= f.text_field :userid %>
+    <%#= f.label :userid %>
+    <%= f.collection_select :userid, @users, :id, :name, include_blank: false %>
   </p>
  
-  <h2>Please enter the book ID here:</h2>
+  <h2>Please select a book:</h2>
   <p>
-    <%= f.label :bookid %><br>
-    <%= f.text_field :bookid %>
+    <%#= f.label :bookid %>
+    <%= f.collection_select :bookid, @bookitems, :id, :title, include_blank: false %>
   </p>
 
   <table>
@@ -45,6 +45,7 @@
 </table>
  
   <p>
+    Hit save then go back home.
     <%= f.submit %>
   </p>
 <% end %>
