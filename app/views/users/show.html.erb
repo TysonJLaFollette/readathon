@@ -44,32 +44,14 @@
 
 <%= form_for :users2book, url: users2books_path do |f| %>
 
-
-  <h2>Please enter the user ID here:</h2>
   <p>
-    <%= f.label :userid %><br>
-    <%= f.text_field :userid %>
+    <%= f.hidden_field :userid, :value=> @user.id %>
   </p>
  
-  <h2>Please enter the book ID here:</h2>
+  <h2>GIVE ME A BOOK TO READ!!!</h2>
   <p>
-    <%= f.label :bookid %><br>
-    <%= f.text_field :bookid %>
+    <%= f.collection_select :bookid, @bookitems, :id, :title, include_blank: false %>
   </p>
-
-  <table>
-  <tr>
-    <th>Title</th>
-    <th>ID</th>
-  </tr>
- 
-  <% @bookitems.each do |bookitem| %>
-    <tr>
-      <td><%= bookitem.title %></td>
-      <td><%= bookitem.id %></td>
-    </tr>
-  <% end %>
-</table>
  
   <p>
     <%= f.submit %>
@@ -81,3 +63,4 @@
 
 
 <%= link_to 'Back', users_path %>
+
