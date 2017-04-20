@@ -284,5 +284,6 @@ hr {
 	/*float:left;*/
 }
 .sitetitle{
+	display:none;
 	float:left;
 }
