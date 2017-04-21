@@ -20,7 +20,8 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #FFFFFF;
+	background: #aa8866;/*#335533;*/
+	background-image: url("tilingpaper.jpg");
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #000000;
@@ -48,7 +49,7 @@ strong {
 }
 
 a {
-	color: #A5C35C;
+	color: #668866;
 }
 
 a:hover {
@@ -82,6 +83,7 @@ hr {
 /** WRAPPER */
 
 #wrapper {
+	
 }
 
 .container {
@@ -107,21 +109,22 @@ hr {
 
 #logo {
 	width: 960px;
-	height: 80px;
+	height: auto;
 	margin: 0px auto;
 	text-transform: uppercase;
+	background: #EEFFEE;
 }
 
 #logo h1 a {
 	display: block;
-	margin: 0px;
+	margin: 0px 5px;
 	padding: 10px 0px 0px 0px;
 	font-size: 36px;
 }
 
 #logo p {
 	margin: -28px 0px 0px 5px;
-	padding: 0px;
+	padding: 0px 5px;
 	font-size: 12px;
 }
 
@@ -135,7 +138,8 @@ hr {
 	width: 960px;
 	height: 48px;
 	margin: 0px auto;
-	background: url(img03.jpg) no-repeat left top;
+	background: #112211;
+	/*background: url(img03.jpg) no-repeat left top;*/
 }
 
 #menu ul {
@@ -168,8 +172,8 @@ hr {
 }
 
 #menu .first a {
-	background: #000000 url(img04.jpg) no-repeat left top;
-	color: #FFFFFF;
+	/*background: #000000 url(img04.jpg) no-repeat left top;
+	color: #FFFFFF;*/
 }
 
 /** PAGE */
@@ -178,15 +182,18 @@ hr {
 	width: 960px;
 	margin: 0px auto;
 	padding: 30px 0px 10px 0px;
+	/*background: #EEFFEE;*/
+	background: linear-gradient(to right,#EEFFEE, #CCDDCC);
 }
 
 /** CONTENT */
 
 #content {
 	float: left;
-	width: 610px;
+	width: 100%;
 	padding-right: 30px;
-	background: url(img06.jpg) repeat-y right top;
+	margin: 0px 0px 0px 5px;
+	/*background: url(img06.jpg) repeat-y right top;*/
 }
 
 /** SIDEBAR */
@@ -259,7 +266,7 @@ hr {
 #footer {
 	width: 960px;
 	margin: 0px auto;
-	background: url(img05.jpg) repeat-x left top;
+	background: #EEFFEE;
 }
 
 #footer p {
@@ -271,4 +278,11 @@ hr {
 
 #footer a {
 	color: #000000;
+}
+
+.sitelogo{
+	/*float:left;*/
+}
+.sitetitle{
+	float:left;
 }
