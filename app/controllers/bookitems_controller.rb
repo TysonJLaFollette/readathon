@@ -23,7 +23,11 @@ class BookitemsController < ApplicationController
 		@bookitem = Bookitem.new(bookitem_params)
 
 		if @bookitem.save
-			redirect_to @bookitem
+
+			if false
+				redirect_to @bookitem
+			end
+			redirect_to bookitems_path	
 		else
 			render 'new'
 		end

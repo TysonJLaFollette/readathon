@@ -1,20 +1,34 @@
 <h1>Listing all the things</h1>
 
 <%= link_to 'HOME', controller: 'welcome' %>
-<%= link_to 'new thing', new_users2book_path %>
+<%= link_to 'Give Someone a Book!', new_users2book_path %>
 
 <table>
   <tr>
-    <th>UserID</th>
-    <th>BookID</th>
+    <th>User</th>
+    <th>Book Title</th>
   </tr>
  
   <% @users2books.each do |users2book| %>
     <tr>
-      <td><%= users2book.userid %></td>
-      <td><%= users2book.bookid %></td>
-      <td><%= link_to 'Show', users2book_path(users2book) %></td>
-      <td><%= link_to 'Edit', edit_users2book_path(users2book) %></td>
+
+        <td>
+          <% @indiv1 = User.all.each do |c1| %>
+            <% if c1.id === users2book.userid %>
+              <p> <%= User.find_by_id(c1.id).name %> </p>
+            <% end %>
+          <% end %>
+        </td>
+
+        <td>
+          <% @book1 = Bookitem.all.each do |b1| %>
+            <% if b1.id === users2book.bookid %>
+              <p> <%= Bookitem.find_by_id(b1.id).title %> </p>
+            <% end %>
+          <% end %>
+        </td>
+      <td><%#= link_to 'Show', users2book_path(users2book) %></td>
+      <td><%= link_to 'Change Something', edit_users2book_path(users2book) %></td>
       <td><%= link_to 'Destroy', users2book_path(users2book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>

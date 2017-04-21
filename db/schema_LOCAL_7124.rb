@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170324042949) do
     t.string   "age"
     t.integer   "pages_read"
     t.integer   "books_read"
-    t.integer   "reading_level"
+    t.string   "reading_level"
     t.text     "book_list"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false

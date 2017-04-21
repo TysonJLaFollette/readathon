@@ -1,4 +1,4 @@
-<h1>Add a New User </h1>
+<h1>Add a new User to the people base! </h1>
 
 <%= form_for :user, url: users_path do |f| %>
 
@@ -23,6 +23,11 @@
       <%= f.label :is_teacher, "Student", :value => false %>
       <%= f.radio_button :is_teacher, false %>
     </div>
+  </p>
+
+  <p>
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
   </p>
 
   <p>
