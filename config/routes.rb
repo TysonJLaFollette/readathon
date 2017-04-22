@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :users
   resources :users2books
   resources :dualbooklists
+  resources :rewards
+  resources :goals
+  resources :users2rewards
+  resources :users2goals
   
 
   root 'welcome#index'
