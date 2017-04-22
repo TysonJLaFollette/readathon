@@ -39,10 +39,7 @@
     <%= f.label :reading_level %><br>
     <%= f.text_field :reading_level %>
   </p>
-  <!-- <p>
-    <%= f.label :current_book %><br>
-    <%= f.text_field :current_book %>
-  </p> -->
+
   <p>
   	<strong>Book list: </strong>
   	<% @booklist = Users2book.all.each do |user2book| %>

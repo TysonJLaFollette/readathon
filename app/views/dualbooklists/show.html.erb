@@ -1,4 +1,4 @@
-<h1><strong>WHO HAS THE BETTER BOOKLIST?!!!</strong></h1>
+<h1 align="center"><strong>WHO HAS THE BETTER BOOKLIST?</strong></h1>
 
 <style type="text/css">
 #wrap {
@@ -8,58 +8,70 @@
 #left_col {
    float:left;
    width:300px;
+   height:600px;
+   background: #ccffff
 }
 #right_col {
    float:right;
    width:300px;
+   height:600px;
+   background: #ccccff
 }
 </style>
 
 <div id="wrap">
     <div id="left_col">
         <p>
-          <strong>IN THIS CORNER WE HAVE!!!</strong>
+          <strong>IN THIS CORNER WE HAVE:</strong>
           <% @chal1 = User.all.each do |c1| %>
             <% if c1.id === @dualbooklist.studentone %>
               <p> <%= User.find_by_id(c1.id).name %> </p>
             <% end %>
           <% end %>
         </p>
- 
- <p>
-	<strong> And the Book List: </strong>
-	<% @booklist = Users2book.all.each do |user2book| %>
-		<% if user2book.userid === @dualbooklist.studentone %>
-			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
-		<% end %>
-	<% end %>
-</p>
+
+        <p>
+	         <strong> And the Book List: </strong>
+           <% @page_sum = 0 %>
+           <% @book_total = 0 %>
+	         <% @booklist = Users2book.all.each do |user2book| %>
+		         <% if user2book.userid === @dualbooklist.studentone %>
+			          <p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
+           <% @page_sum = @page_sum + Bookitem.find_by_id(user2book.bookid).pages %>
+           <% @book_total = @book_total + 1 %>
+		       <% end %>
+	        <% end %>
+          <p style= "position: absolute; bottom: 0"><strong>Total Pages: </strong> <%= @page_sum %></p>
+          <p style= "position: absolute; bottom: 25px"><strong>Total Books: </strong> <%= @book_total %></p>
+        </p>
     </div>
-      <div id="right_col">
+
+    <div id="right_col">
           <p>
-            <strong>AND IN THIS CORNER IS!!!</strong>
+            <strong>AND IN THIS CORNER IS:</strong>
             <% @chal2 = User.all.each do |c2| %>
               <% if c2.id === @dualbooklist.studenttwo %>
-                <p> <%= User.find_by_id(c2.id).name %> </p>
+                <p><%= User.find_by_id(c2.id).name %> </p>
               <% end %>
             <% end %>
           </p>
+
           <p>
+            <% @page_sum2 = 0 %>
+            <% @book_total2 = 0 %>
             <strong> And the Book List: </strong>
           	<% @booklist = Users2book.all.each do |user2book| %>
           		<% if user2book.userid === @dualbooklist.studenttwo %>
           			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
+                 <% @page_sum2 = @page_sum2 + Bookitem.find_by_id(user2book.bookid).pages %>
+                 <% @book_total2 = @book_total2 + 1 %>
           		<% end %>
           	<% end %>
+            <p style= "position: absolute; bottom: 0"><strong>Total Pages: </strong> <%= @page_sum2 %></p>
+            <p style= "position: absolute; bottom: 25px"><strong>Total Books: </strong> <%= @book_total2 %></p>
           </p>
+
       </div>
 </div>
 
-
-
-
-
-
-
- 
  <%= link_to 'Back', dualbooklists_path %>
