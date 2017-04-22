@@ -1,0 +1,58 @@
+<h1>Please add a new user to reward</h1>
+
+<%= form_for :users2reward, url: users2rewards_path do |f| %>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.id %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+  <h2>Please select a user :</h2>
+  <p>
+    <%#= f.label :userid %>
+    <%= f.collection_select :userid, @users, :id, :name, include_blank: false %>
+  </p>
+ 
+  <h2>Please select a reward:</h2>
+  <p>
+    <%#= f.label :rewardid %>
+    <%= f.collection_select :rewardid, @rewards, :id, :name, include_blank: false %>
+  </p>
+
+  <table>
+  <tr>
+    <th>name</th>
+    <th>ID</th>
+  </tr>
+ 
+  <% @rewards.each do |reward| %>
+    <tr>
+      <td><%= reward.name %></td>
+      <td><%= reward.id %></td>
+    </tr>
+  <% end %>
+</table>
+ 
+  <p>
+    Hit save then go back home.
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', users2rewards_path %>
+
+
+
+

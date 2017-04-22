@@ -1,0 +1,35 @@
+<h1>Listing all the things</h1>
+
+<%= link_to 'HOME', controller: 'welcome' %>
+<%= link_to 'Give Someone a reward!', new_users2reward_path %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>reward name</th>
+  </tr>
+ 
+  <% @users2rewards.each do |users2reward| %>
+    <tr>
+
+        <td>
+          <% @indiv1 = User.all.each do |c1| %>
+            <% if c1.id === users2reward.userid %>
+              <p> <%= User.find_by_id(c1.id).name %> </p>
+            <% end %>
+          <% end %>
+        </td>
+
+        <td>
+          <% @reward1 = Reward.all.each do |b1| %>
+            <% if b1.id === users2reward.rewardid %>
+              <p> <%= Reward.find_by_id(b1.id).name %> </p>
+            <% end %>
+          <% end %>
+        </td>
+      <td><%= link_to 'Show', users2reward_path(users2reward) %></td>
+      <td><%= link_to 'Change Something', edit_users2reward_path(users2reward) %></td>
+      <td><%= link_to 'Destroy', users2reward_path(users2reward), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

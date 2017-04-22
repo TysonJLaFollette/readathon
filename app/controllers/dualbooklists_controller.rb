@@ -1,4 +1,5 @@
 class DualbooklistsController < ApplicationController
+	http_basic_authenticate_with name: "12", password: "12", only: :destroy
 	def index
 		@users2books = Users2book.all
 		@users = User.all
