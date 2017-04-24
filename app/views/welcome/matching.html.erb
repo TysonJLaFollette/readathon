@@ -1,0 +1,19 @@
+<h1>WELCOME TO THE GAME</h1>
+
+<h3>This is a quiz game</h3>
+</br>
+Just hit "Finish the Game" When you are ready to quit.
+<div id="question">
+    <h3 id="current-question"></h3>
+    <p id="first-q"></p><input type="radio" name="answer" value="correct">
+    <p id="second-q"></p><input type="radio" name="answer" value="incorrect"></br></br>
+    <button type="button" >submit answer</button>
+</div>
+
+
+
+<%= link_to 'Finish the Game', controller: 'welcome', action: 'index' %>
+<form>
+    <input type="hidden" name="score" value="5" id="scorekeeper">
+</form>
+

@@ -69,8 +69,14 @@ class WelcomeController < ApplicationController
    
 
   end
-
-
+	
+	def matching
+		
+	end
+	
+	def displayscores
+	
+	end
 
 
 end

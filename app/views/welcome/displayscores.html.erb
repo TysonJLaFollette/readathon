@@ -1,0 +1,16 @@
+<h1>Leader Rankings</h1>
+<form action='/' method="get">
+    <input type="submit" value="Start a new game!">
+</form>
+<table>
+    <% blogs.forEach(function(unit){ %>
+    <tr><td>______________________________________________________________________________</td></tr>
+    <tr><td> First Name: <%= unit.fname %></td></tr>
+    <tr><td> Last Name : <%= unit.lname %></td></tr>
+    <tr><td> DATE CREATED: <%= unit.created %></td></tr>
+    <tr><td> SCORE: <%= unit.score %></td></tr>
+    <td><a href='/QuizGame/<%= unit.id %>?_method=DELETE' >Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+

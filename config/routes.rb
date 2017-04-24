@@ -19,5 +19,8 @@ Rails.application.routes.draw do
 
   get "app/views/welcome/classsummary", to: "welcome#classsummary", as: "classsummary"
 
+  get "app/views/welcome/matching", to:"welcome#matching", as: "matching"
+  post "app/views/welcome/displayscores", to:"welcome#displayscores", as: "displayscores"
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
