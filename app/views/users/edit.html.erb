@@ -26,21 +26,6 @@
   </p>
 
   <p>
-    <%= f.label :pages_read %><br>
-    <%= f.text_field :pages_read %>
-  </p>
-
-  <p>
-    <%= f.label :books_read %><br>
-    <%= f.text_field :books_read %>
-  </p>
-
-  <p>
-    <%= f.label :reading_level %><br>
-    <%= f.text_field :reading_level %>
-  </p>
-
-  <p>
   	<strong>Book list: </strong>
   	<% @booklist = Users2book.all.each do |user2book| %>
   		<% if user2book.userid === @user.id %>

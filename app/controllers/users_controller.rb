@@ -5,13 +5,13 @@ class UsersController < ApplicationController
 
 
 	def show
-		
+
 		@users2books = Users2book.all
 		@bookitems = Bookitem.all
 
 		@user = User.find(params[:id])
 
-		
+
 
 		@newUserBook = Users2book.new
 	end
@@ -24,6 +24,38 @@ class UsersController < ApplicationController
 
 	def edit
 		@user = User.find(params[:id])
+    @page_sum = 0
+    @books_total = 0
+      @booklist = Users2book.all.each do |user2book|
+      	if user2book.userid === @user.id
+      	 @page_sum = @page_sum + Bookitem.find_by_id(user2book.bookid).pages
+         @books_total = @books_total + 1
+      	end
+      end
+      @user.pages_read = @page_sum
+      @user.books_read = @books_total
+
+
+      #user reading level based on pages read and books read
+      @standings = ""
+      if @user.pages_read > 0 && @user.books_read > 0
+        @standings = "Novice"
+        @user.reading_level = @standings
+      end
+      if @user.pages_read > 200 && @user.books_read > 2
+        @standings = "Apprentice"
+        @user.reading_level = @standings
+      end
+      if @user.pages_read > 1000 && @user.books_read > 10
+        @standings = "Journeyman"
+        @user.reading_level = @standings
+      end
+      if @user.pages_read > 10000 && @user.books_read > 40
+        @standings = "Master"
+        @user.reading_level = @standing
+      end
+
+      @user.save
 	end
 
 
@@ -55,10 +87,10 @@ class UsersController < ApplicationController
 	end
 
 
-private 
+private
 	def user_params
 		params.require(:user).permit(:name, :is_teacher, :age, :pages_read, :books_read, :reading_level, :book_list)
-		
+
 	end
 
 end
