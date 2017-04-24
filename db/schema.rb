@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405063131) do
+ActiveRecord::Schema.define(version: 20170422193448) do
 
   create_table "bookitems", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,22 @@ ActiveRecord::Schema.define(version: 20170405063131) do
   create_table "dualbooklists", force: :cascade do |t|
     t.integer  "studentone"
     t.integer  "studenttwo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.string   "name"
+    t.string   "text"
+    t.boolean  "is_class"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rewards", force: :cascade do |t|
+    t.string   "name"
+    t.string   "text"
+    t.boolean  "is_class"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +57,20 @@ ActiveRecord::Schema.define(version: 20170405063131) do
   create_table "users2books", force: :cascade do |t|
     t.integer  "userid"
     t.integer  "bookid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users2goals", force: :cascade do |t|
+    t.integer  "userid"
+    t.integer  "goalid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users2rewards", force: :cascade do |t|
+    t.integer  "userid"
+    t.integer  "rewardid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

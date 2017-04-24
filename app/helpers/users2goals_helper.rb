@@ -1,0 +1,2 @@
+module Users2goalsHelper
+end

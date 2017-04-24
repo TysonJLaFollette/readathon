@@ -1,0 +1,35 @@
+<h1>Listing all the things</h1>
+
+<%= link_to 'HOME', controller: 'welcome' %>
+<%= link_to 'Give Someone a goal!', new_users2goal_path %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>goal name</th>
+  </tr>
+ 
+  <% @users2goals.each do |users2goal| %>
+    <tr>
+
+        <td>
+          <% @indiv1 = User.all.each do |c1| %>
+            <% if c1.id === users2goal.userid %>
+              <p> <%= User.find_by_id(c1.id).name %> </p>
+            <% end %>
+          <% end %>
+        </td>
+
+        <td>
+          <% @goal1 = Goal.all.each do |b1| %>
+            <% if b1.id === users2goal.goalid %>
+              <p> <%= Goal.find_by_id(b1.id).name %> </p>
+            <% end %>
+          <% end %>
+        </td>
+      <td><%= link_to 'Show', users2goal_path(users2goal) %></td>
+      <td><%= link_to 'Change Something', edit_users2goal_path(users2goal) %></td>
+      <td><%= link_to 'Destroy', users2goal_path(users2goal), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

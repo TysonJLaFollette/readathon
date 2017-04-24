@@ -1,4 +1,5 @@
 class BookitemsController < ApplicationController
+	http_basic_authenticate_with name: "12", password: "12", only: :destroy
 	def index
 		@bookitems = Bookitem.all
 	end

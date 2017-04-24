@@ -1,0 +1,58 @@
+<h1>Please add a new user to goal</h1>
+
+<%= form_for :users2goal, url: users2goals_path do |f| %>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.id %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+  <h2>Please select a user :</h2>
+  <p>
+    <%#= f.label :userid %>
+    <%= f.collection_select :userid, @users, :id, :name, include_blank: false %>
+  </p>
+ 
+  <h2>Please select a goal:</h2>
+  <p>
+    <%#= f.label :goalid %>
+    <%= f.collection_select :goalid, @goals, :id, :name, include_blank: false %>
+  </p>
+
+  <table>
+  <tr>
+    <th>name</th>
+    <th>ID</th>
+  </tr>
+ 
+  <% @goals.each do |goal| %>
+    <tr>
+      <td><%= goal.name %></td>
+      <td><%= goal.id %></td>
+    </tr>
+  <% end %>
+</table>
+ 
+  <p>
+    Hit save then go back home.
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', users2goals_path %>
+
+
+
+
