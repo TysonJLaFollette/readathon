@@ -1,7 +1,6 @@
-<h1>Detailed User Report </h1>
+<h1><center><strong>Student Stats</strong></center> </h1>
 <p>
-	<strong>Name:</strong>
-	<%= @user.name %>
+<strong> <font size = "+2"><%= @user.name %></font></strong>
 </p>
 
 <p>
@@ -23,12 +22,17 @@
 </p>
 
 <p>
+	<strong>Standing: </strong>
+	<%= @user.age %>
+</p>
+
+<p>
 	<strong>Reading Level: </strong>
 	<%= @user.reading_level %>
 </p>
 
 <p>
-	<strong>Book list: </strong>
+	<strong >Book list: </strong>
 	<% @booklist = Users2book.all.each do |user2book| %>
 		<% if user2book.userid === @user.id %>
 			<p> <%= Bookitem.find_by_id(user2book.bookid).title %> </p>
@@ -37,22 +41,17 @@
 </p>
 
 
-
-
-
-
-
 <%= form_for :users2book, url: users2books_path do |f| %>
 
   <p>
     <%= f.hidden_field :userid, :value=> @user.id %>
   </p>
- 
+
   <h2>GIVE ME A BOOK TO READ!!!</h2>
   <p>
     <%= f.collection_select :bookid, @bookitems, :id, :title, include_blank: false %>
   </p>
- 
+
   <p>
     <%= f.submit %>
   </p>
@@ -63,4 +62,3 @@
 
 
 <%= link_to 'Back', users_path %>
-
