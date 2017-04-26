@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 	def index
 		@users = User.all
-	end
+    @leaders = User.all.order(pages_read: :desc)
 
+
+	end
 
 	def show
 
@@ -38,23 +40,19 @@ class UsersController < ApplicationController
 
       #user reading level based on pages read and books read
       @standings = ""
-      if @user.pages_read > 0 && @user.books_read > 0
+      if @user.pages_read >= 0 && @user.books_read >= 0
         @standings = "Novice"
-        @user.reading_level = @standings
       end
-      if @user.pages_read > 200 && @user.books_read > 2
+      if @user.pages_read > 200 && @user.books_read > 3
         @standings = "Apprentice"
-        @user.reading_level = @standings
       end
       if @user.pages_read > 1000 && @user.books_read > 10
         @standings = "Journeyman"
-        @user.reading_level = @standings
       end
-      if @user.pages_read > 10000 && @user.books_read > 40
+      if @user.pages_read > 10000 && @user.books_read > 20
         @standings = "Master"
-        @user.reading_level = @standing
       end
-
+      @user.reading_level = @standings
       @user.save
 	end
 

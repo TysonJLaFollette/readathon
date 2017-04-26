@@ -1,7 +1,6 @@
-<h1>Detailed User Report </h1>
+<h1><center>Student Stats </center></h1>
 <p>
-	<strong>Name:</strong>
-	<%= @user.name %>
+	<strong><font size="+2"><%= @user.name %></font></strong>
 </p>
 
 <p>
@@ -36,31 +35,21 @@
 	<% end %>
 </p>
 
-
-
-
-
-
-
 <%= form_for :users2book, url: users2books_path do |f| %>
 
   <p>
     <%= f.hidden_field :userid, :value=> @user.id %>
   </p>
- 
-  <h2>GIVE ME A BOOK TO READ!!!</h2>
+
+  <h2>Select a New Book</h2>
   <p>
     <%= f.collection_select :bookid, @bookitems, :id, :title, include_blank: false %>
   </p>
- 
+
   <p>
     <%= f.submit %>
   </p>
 <% end %>
 
 
-
-
-
 <%= link_to 'Back', users_path %>
-
