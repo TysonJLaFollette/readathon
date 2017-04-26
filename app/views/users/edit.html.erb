@@ -41,23 +41,7 @@
   	 <% @page_sum = @page_sum + Bookitem.find_by_id(user2book.bookid).pages %>
   	<% end %>
   <% end %>
-  <p> Total Pages: <%= @page_sum %>
 
-  <%= form_for :users2book, url: users2books_path do |f| %>
-
-    <p>
-      <%= f.hidden_field :userid, :value=> @user.id %>
-    </p>
-
-    <h2>GIVE ME A BOOK TO READ!!!</h2>
-    <p>
-      <%= f.collection_select :bookid, @bookitems, :id, :title, include_blank: false %>
-    </p>
-
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
   <p>
     <%= f.submit %>
   </p>
