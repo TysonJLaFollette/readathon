@@ -23,10 +23,9 @@
 <div id="wrap">
     <div id="left_col">
         <p>
-          <strong>IN THIS CORNER WE HAVE!!!</strong>
           <% @chal1 = User.all.each do |c1| %>
             <% if c1.id === @dualbooklist.studentone %>
-              <p> <%= User.find_by_id(c1.id).name %> </p>
+              <p><strong> <font size = "+2"><%= User.find_by_id(c1.id).name %> </strong></font></p>
             <% end %>
           <% end %>
         </p>
@@ -43,17 +42,17 @@
       		<% end %>
       	<% end %>
         <p style="position: absolute; bottom: 0"><strong> Total Pages: </strong><%= @page_sum %></p>
-        <p style="position: absolute; bottom: 25px"><strong> Total Books: </strong><%= @book_total %></p>
+        <p style="position: absolute; bottom: -24px"><strong> Total Books: </strong><%= @book_total %></p>
+        <p style="position: absolute; bottom: -47px"><strong> Pages per Book: </strong><%= @page_sum / @book_total %></p>
 
       </p>
 
   </div>
   <div id="right_col">
       <p>
-        <strong>AND IN THIS CORNER IS!!!</strong>
         <% @chal2 = User.all.each do |c2| %>
           <% if c2.id === @dualbooklist.studenttwo %>
-            <p> <%= User.find_by_id(c2.id).name %> </p>
+            <p><strong><font size = "+2"><%= User.find_by_id(c2.id).name %></strong></font> </p>
           <% end %>
         <% end %>
       </p>
@@ -69,7 +68,8 @@
       		<% end %>
       	<% end %>
         <p style="position: absolute; bottom: 0"><strong> Total Pages: </strong><%= @page_sum2 %></p>
-        <p style="position: absolute; bottom: 25px"><strong> Total Books: </strong><%= @book_total2 %></p>
+        <p style="position: absolute; bottom: -24px"><strong> Total Books: </strong><%= @book_total2 %></p>
+        <p style="position: absolute; bottom: -47px"><strong> Pages per Book: </strong><%= @page_sum2 / @book_total2 %></p>
 
       </p>
   </div>

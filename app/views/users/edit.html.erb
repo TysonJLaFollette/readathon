@@ -26,21 +26,6 @@
   </p>
 
   <p>
-    <%= f.label :pages_read %><br>
-    <%= f.text_field :pages_read %>
-  </p>
-
-  <p>
-    <%= f.label :books_read %><br>
-    <%= f.text_field :books_read %>
-  </p>
-
-  <p>
-    <%= f.label :reading_level %><br>
-    <%= f.text_field :reading_level %>
-  </p>
-
-  <p>
   	<strong>Book list: </strong>
   	<% @booklist = Users2book.all.each do |user2book| %>
   		<% if user2book.userid === @user.id %>
@@ -58,7 +43,21 @@
   <% end %>
   <p> Total Pages: <%= @page_sum %>
 
+  <%= form_for :users2book, url: users2books_path do |f| %>
 
+    <p>
+      <%= f.hidden_field :userid, :value=> @user.id %>
+    </p>
+
+    <h2>GIVE ME A BOOK TO READ!!!</h2>
+    <p>
+      <%= f.collection_select :bookid, @bookitems, :id, :title, include_blank: false %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
   <p>
     <%= f.submit %>
   </p>

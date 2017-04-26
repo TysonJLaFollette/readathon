@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  validates_presence_of :name,:age
-  validates_numericality_of :age,
-  	:message => "must be a number"
+  validates_presence_of :name
   #has_many :users2book
 end

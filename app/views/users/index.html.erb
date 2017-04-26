@@ -4,13 +4,12 @@
 <table>
   <tr>
     <th>Name: </th>
-    <th>Rank: </th>
-    <th>Age: </th>
+    <th>Status: </th>
     <th>Pages Read: </th>
     <th>Books Read: </th>
     <th>Reading Level:</th>
   </tr>
- 
+
   <% @users.each do |user| %>
     <tr>
       <td><%= user.name %></td>
@@ -21,11 +20,10 @@
         <%= "Student" %>
         <% end %>
       </td>
-      <td><%= user.age %></td>
       <td><%= user.pages_read %></td>
       <td><%= user.books_read %></td>
       <td><%= user.reading_level %></td>
-      <td><%= link_to 'Report Card', user_path(user) %></td>
+      <td><%= link_to 'Stats', user_path(user) %></td>
       <td><%= link_to 'Edit', edit_user_path(user) %></td>
       <td><%= link_to 'Destroy', user_path(user),method: :delete,data: { confirm: 'Are you Sure?' } %> </td>
     </tr>
